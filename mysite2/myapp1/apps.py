@@ -15,10 +15,6 @@ class Myapp1Config(AppConfig):
         name (str): The name of the app. Should match the name used in the
             app's 'INSTALLED_APPS' configuration in Django settings.
 
-    Example:
-        To use this configuration in your Django project's settings, add
-        'myapp1.apps.Myapp1Config' to the 'INSTALLED_APPS' list.
-
     """
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'myapp1'
