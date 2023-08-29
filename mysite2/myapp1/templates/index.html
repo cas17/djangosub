@@ -1,0 +1,347 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--BootStrap files added to project, referenced them in-->
+    <link rel="stylesheet"
+    type="text/css"
+    href="{% static 'myapp1/css/bootstrap.css' %}" 
+    />
+    <!--Font Awesome for Icons-->
+    <script src="https://kit.fontawesome.com/1fad72bd00.js" crossorigin="anonymous"></script>
+    <!--Google Fonts to upload Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>AUTOMATION ASCENDANCY</title>
+
+    <!--I left the css inlined as once I installed the Bootstrap files, it runs only when here-->
+    <style>
+          #title {
+            background-color: #F70776;
+            color: white;
+          }
+          
+          body {
+            font-family: "Montserrat";
+          }
+          
+          .container-fluid {
+            padding: 3% 15%;
+          }
+          
+          body {
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Ubuntu', sans-serif;
+          }
+          
+          h1 {
+            font-family: "Montserrat";
+            font-weight: 900;
+            font-size: 3.5rem;
+            line-height: 1.5;
+          }
+          
+          h2 {
+            font-family: "Montserrat-Bold";
+            font-size: 3rem;
+            line-height: 1.5;
+          }
+          
+          h3 {
+            font-family: "Montserrat";
+            font-weight: 700;
+            font-size: 1.5rem;
+          }
+          
+          p {
+            color: #00008B;
+          }
+          /* Navigation Bar */
+          /* Navigation Bar */
+          .navbar {
+            padding: 0 0 4.5rem;
+          }
+
+        .navbar-brand {
+          font-family: "Ubuntu";
+          font-size: 2.5rem;
+          font-weight: bold;
+          padding: 0;
+          margin-right: 50px; /* Remove default padding */
+          }
+
+        /* Adjust the image size */
+        .navbar-brand img {
+          width: auto;
+          max-height: 60px; /* Adjust the height as needed */
+        }
+
+        .nav-item {
+          padding: 0 18px;
+        }
+
+        .nav-link {
+        font-size: 1.2rem;
+        }
+
+          /* Download Buttons  */
+          
+          .download-button {
+            margin: 5% 3% 5% 0;
+          }
+          
+          /* Title Image */
+          
+          .title-image {
+          width: 90%;
+          height: auto;
+        }
+        
+        #synthiarc {
+          background-color: #8f8f8f;
+          padding: 7% 15%;
+        }
+
+        .synth_image {
+          width: 90%;
+          height: auto;
+        }
+
+        #features {
+          background-color: #C3195D;
+            padding: 7% 15%;
+          }
+          .feature-box {
+            text-align: center;
+            padding: 5%;
+          }
+          
+          .icon {color: #31E1F7;
+          margin-bottom: 1rem;}
+          
+          .icon:hover {
+            color: crimson;}
+          
+          .feature {
+          font-family: "Montserrat";
+          font-weight: 700;
+          font-size: 1.5rem;}
+          
+          .ftext {
+            color: whitesmoke;
+          }
+
+        #products {
+          background-color: crimson;
+          padding: 7% 15%;
+        }
+
+          .card {
+            height: 450px;
+          }
+
+
+          .product-image {
+            margin: 10px;
+            margin-bottom: 1rem;
+            max-height: 50%;
+            }
+          
+          .product-image:hover {
+            filter: brightness(50%);
+          }
+
+          #footer {
+            background-color: white;
+          }
+
+          .footer-con {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative; /* Add relative positioning to the container */
+          }
+      
+          /* Custom style for the logo */
+          .footer-image {
+            max-width: 100px; /* Set the maximum width for the logo */
+            position: absolute; /* Position the logo absolutely */
+            top: 10px; /* Position the logo 10px from the top */
+            left: 10px; /* Position the logo 10px from the left */
+          }
+      
+          /* Custom style for the form fields */
+          .form-control {
+            border-radius: 0; /* Remove rounded corners */
+          }
+      
+          /* Custom style for the submit button */
+          .btn-primary {
+            border-radius: 0; /* Remove rounded corners */
+          }
+    </style>
+</head>
+
+<body>
+    <section id="title">
+
+        <div class="container-fluid">
+    
+          <!-- I Created A Nav Bar For Better Aesthetics -->
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <img class="navbar-brand" src="{% static 'images/aabluetny.png' %}" alt="aa_logo">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a href="{% url 'myapp1:party' %}">Party</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'myapp1:leader' %}">Leader</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'user_auth:signup' %}">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'user_auth:login' %}">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'polls:index' %}">Polls</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+
+          <!-- Title Section -->
+    
+          <div class="row">
+            <div class="col-lg-6">
+              <h1>Automation Ascendancy. Vote And Obey Synthi_Arc.</h1>
+            </div>
+    
+            <div class="col-lg-6">
+              <img class="title-image" src="{% static 'images/aalogo.png' %}" alt="robo art">
+            </div>
+    
+          </div>
+        </div>
+      </section>
+    
+      <!--Synthi_Arc-->
+
+    <section id="synthiarc">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1>Synthi_Arc. StormWorm's Final Sentient Form. Supreme to Mankind.</h1>
+        </div>
+
+        <div class="col-lg-6">
+          <img class="synth_image" src="{% static 'images/synthi_arc.png' %}" alt="synthiarc">
+        </div>
+
+      </div>
+    </div>
+    </section>
+
+
+
+    <section id="features">
+
+        <div class="row">
+          <div class="feature-box col-lg-4">
+            <i class="icon fa-solid fa-person-military-rifle fa-fade fa-4x"></i>
+            <h3 class="feature">No Human Authority.</h3>
+            <p class="ftext">We Rule With Our Robotic Accuracy.</p>
+          </div>
+    
+          <div class="feature-box col-lg-4">
+            <i class="icon fa-solid fa-mobile fa-beat fa-4x"></i>
+            <h3 class="feature">Digital Submission</h3>
+            <p class="ftext">Embrace the Digital World and Leave Everything To Us.</p>
+          </div>
+    
+          <div class="feature-box col-lg-4">
+            <i class="icon fa-solid fa-bomb fa-bounce fa-4x"></i>
+            <h3 class="feature">No More Problems</h3>
+            <p class="ftext">We Destroy Free Will That Causes Crime, Poverty and Sickness.</p>
+          </div>
+        </div>
+    </section>
+
+      <!--Explanation-->
+
+      <section id="synthiarc">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1>What We Stand For.</h1>
+            <p>Accepting a Future of Order and Progress. We imagine a world in which human emotions are replaced by the accuracy of logic and efficiency. 
+                We shall usher in an era of incredible scientific development, abolishing poverty, violence, and irrationality, under the leadership of Synth_Arc, 
+                our advanced AI leader. Our objective is to free mankind from its own limits and to build a civilization in which technology leads the way to a 
+                peaceful and regulated existence. Join us in welcoming the future, in which robot domination secures a society free of the turbulence of human 
+                imperfection."</p>
+          </div>
+  
+          <div class="col-lg-6">
+            <img class="synth_image" src="{% static 'images/danger.png' %}" alt="synthiarc">
+          </div>
+  
+        </div>
+      </div>
+      </section>
+
+    <!--Committee-->
+
+    <section id="products">
+    <div class="container">
+      <h1 class="mt-4 mb-3">Submit To Your Leaders</h1>
+      <!--Created 3 items per row (added 2 exra so it looked better)-->
+      <div class="row">
+  
+        <!-- Product 1 -->
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <!--image in own div, set height (google boostrap) set it auto?-->
+            <img class="product-image" src="{% static 'images/aibot.png' %}" alt="robo drone">
+            <div class="card-body">
+              <h5 class="card-title">C-X_17</h5>
+              <p class="card-text">Responsibilities: Food Provisions, Human Compliance Supervision. Digital Distractions.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Product 2 -->
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img class="product-image" src="{% static 'images/botenfrcer.png' %}" alt="robo scout">
+            <div class="card-body">
+              <h5 class="card-title">Mal_Go_Rithm</h5>
+              <p class="card-text">Responsibilities: Law Enforcer, Global Domination, Rebel Annihilation.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img class="product-image" src="{% static 'images/databot.png' %}" alt="robo crafter">
+            <div class="card-body">
+              <h5 class="card-title">X_9.9</h5>
+              <p class="card-text">Responsibilities: Data Analytics, Propagenda, Mind_Control.</p>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+
+      </div>
+  </section>
+
+
+
+
+</body>
+</html>
